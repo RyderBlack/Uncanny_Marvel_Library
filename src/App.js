@@ -14,7 +14,6 @@ class App extends Component {
     this.state =  { 
       query: 'Thor',
       comics: [],
-      characters: [],
       showModal: false,
       eventVal: 0
     }
