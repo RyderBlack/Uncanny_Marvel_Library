@@ -39,11 +39,6 @@ export default class ComicDetails extends Component {
                             <p>Print Price: $ {this.props.details.comics[i].prices[0].price}</p>
                         </div>
                     </div>
-
-                    <div className="row">
-                        <p className="col-md-2"> {this.props.details.comics[i].characters.items[0].name}</p>
-                        <p className="col-md-2"> {this.props.details.comics[i].characters.items[1].name}</p>
-                    </div>
                 </div>
 
                 <div className="col-xs-1 col-md-1 btn-closing">

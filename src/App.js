@@ -14,11 +14,11 @@ class App extends Component {
     this.state =  { 
       query: 'Thor',
       comics: [],
+      characters: [],
       showModal: false,
       eventVal: 0
     }
    this.searchComics()
-  //this.handleClick = this.handleClick.bind(this)
   this.handleOpenModal = this.handleOpenModal.bind(this);
   this.handleCloseModal = this.handleCloseModal.bind(this);
   }
