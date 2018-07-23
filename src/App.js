@@ -19,13 +19,14 @@ class App extends Component {
       eventVal: 0
     }
    this.searchComics()
+   this.handleInputChange = this.handleInputChange.bind(this)
   this.handleOpenModal = this.handleOpenModal.bind(this);
   this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   searchComics() {
 
-    axios.get(`https://gateway.marvel.com:443/v1/public/comics?titleStartsWith=${this.state.query}&limit=20&apikey=7db6ef89ac98e1a615b902a069b08e27`)
+    axios.get(`https://gateway.marvel.com:443/v1/public/comics?titleStartsWith=${this.state.query}&limit=40&apikey=7db6ef89ac98e1a615b902a069b08e27`)
       .then(res => {
         let comicsRes = res.data.data.results;
         this.setState({comics : comicsRes})
@@ -73,9 +74,11 @@ class App extends Component {
           </nav>
 
           <div className="row">
+          <div className="col-md-12 search-wrapper">
           <input type="text" placeholder="Enter a comic name" className="search-input" ref={input => this.search = input}
-          onChange={this.handleInputChange} />
-          
+           /> 
+           <button type="button" className="btn btn-danger btn-searchy" onClick={this.handleInputChange}>search</button>
+          </div>
           </div>
 
           <div className="row">
