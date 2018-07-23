@@ -25,7 +25,7 @@ class App extends Component {
 
   searchComics() {
 
-    axios.get(`https://gateway.marvel.com:443/v1/public/comics?titleStartsWith=${this.state.query}&limit=40&apikey=7db6ef89ac98e1a615b902a069b08e27`)
+    axios.get(`https://gateway.marvel.com:443/v1/public/comics?titleStartsWith=${this.state.query}&limit=28&apikey=7db6ef89ac98e1a615b902a069b08e27`)
       .then(res => {
         let comicsRes = res.data.data.results;
         this.setState({comics : comicsRes})
