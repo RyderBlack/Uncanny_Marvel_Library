@@ -73,11 +73,8 @@ class App extends Component {
           </nav>
 
           <div className="row">
-          <div className="col-md-12 search-wrapper">
-          <input type="text" placeholder="Enter a comic name" className="search-input" ref={input => this.search = input}
+          <input type="text" placeholder="Enter a comic name" onChange={this.handleInputChange} className="search-input" ref={input => this.search = input}
            /> 
-           <button type="button" className="btn btn-danger btn-searchy" onClick={this.handleInputChange}>search</button>
-          </div>
           </div>
 
           <div className="row">
