@@ -187,6 +187,7 @@
 
 .wrappy {
   margin-left: 2em;
+  position: fixed;
 }
 
 .loader {
