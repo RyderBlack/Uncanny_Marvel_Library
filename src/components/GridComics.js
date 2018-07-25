@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import ComicDetails from './ComicDetails';
+import Loader from 'react-loader-spinner';
 
 
 export default class GridComics extends Component {
@@ -7,6 +8,18 @@ export default class GridComics extends Component {
    
   
     render() {
+
+        if (this.props.com.comics === undefined || this.props.com.comics.length === 0) {
+            return (
+               
+                <Loader 
+                    type="Puff"
+                    color="red"
+                    height="100"	
+                    width="100"
+                /> 
+            )
+        } else {
 
         return(
            <div className="row">
@@ -26,5 +39,6 @@ export default class GridComics extends Component {
 
             </div>
         )
+        }
     }
 }

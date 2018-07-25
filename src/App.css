@@ -188,3 +188,9 @@
 .wrappy {
   margin-left: 2em;
 }
+
+.loader {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 50px;
+}
