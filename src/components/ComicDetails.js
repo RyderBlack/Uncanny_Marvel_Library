@@ -50,7 +50,7 @@ export default class ComicDetails extends Component {
                         <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+3].id} src={this.props.details.comics[randomized+3].thumbnail.path+".jpg"} alt=""/>
                         <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+4].id} src={this.props.details.comics[randomized+4].thumbnail.path+".jpg"} alt=""/>
                     </div>
-                
+                {/*<SeeAlso action2={this.props.action2} id={this.props.details.comic[i]} />*/}
                 </div>
 
                 <div className="col-xs-1 col-md-1 btn-closing">
