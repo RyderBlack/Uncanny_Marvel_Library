@@ -33,7 +33,7 @@ export default class GridComics extends Component {
             <a onClick={this.props.action}><img className="img-posters fade-in" id={comic.id} src={comic.thumbnail.path+".jpg"} alt=""/> </a>
             </div>
             
-            {this.props.com.eventVal === comic.id ? <ComicDetails details={this.props.com} handleclo={this.props.handleClose}/> : ''}
+            {this.props.com.eventVal === comic.id ? <ComicDetails details={this.props.com} handleclo={this.props.handleClose} action2={this.props.action}/> : ''}
             </Fragment>
           )})}
 

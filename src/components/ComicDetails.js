@@ -9,6 +9,7 @@ export default class ComicDetails extends Component {
     render() {
 
         let comicLen = this.props.details.comics.length;
+        let randomized = Math.floor(Math.random() * 10);
 
         for(let i=0; i< comicLen;i++) {
             if(this.props.details.eventVal === this.props.details.comics[i].id) {
@@ -40,8 +41,16 @@ export default class ComicDetails extends Component {
                         </div>
                     </div>
 
-                    <p>See also</p>
-                    
+                
+                    <p style={{'font-size':22,'font-weight': 'bold'}}>See also:</p>
+                    <div className="zoomIn">
+                        <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized].id} src={this.props.details.comics[randomized].thumbnail.path+".jpg"} alt=""/>
+                        <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+1].id} src={this.props.details.comics[randomized+1].thumbnail.path+".jpg"} alt=""/>
+                        <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+2].id} src={this.props.details.comics[randomized+2].thumbnail.path+".jpg"} alt=""/>
+                        <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+3].id} src={this.props.details.comics[randomized+3].thumbnail.path+".jpg"} alt=""/>
+                        <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+4].id} src={this.props.details.comics[randomized+4].thumbnail.path+".jpg"} alt=""/>
+                    </div>
+                
                 </div>
 
                 <div className="col-xs-1 col-md-1 btn-closing">

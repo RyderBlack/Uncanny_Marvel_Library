@@ -148,7 +148,7 @@
 }
 
 .detail-title {
-  padding: 1.5em 1em 2em 0;
+  padding: .5em 1em 1em 0;
   color: white;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .detail-info {
-  padding: 50px 30px 30px 30px;
+  padding: 30px;
   color: white;
   font-size: 1em
 }
@@ -193,4 +193,40 @@
   width: 100%;
   height: 200px;
   margin-bottom: 50px;
+}
+
+.img-also {
+  width: 120px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  /* make things invisible upon start */
+  -webkit-animation: zoomIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: zoomIn ease-in 1;
+  animation: zoomIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
 }
