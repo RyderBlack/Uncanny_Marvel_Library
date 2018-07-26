@@ -1,3 +1,3 @@
 The Uncanny Library every Marvel Comics reader needs !!! 👊💪🙌
 
-![Alt Text](for_git/home-image.jpg?raw=true "Title")
+![Alt Text](Uncanny_Marvel_Library/for git/home-image.png?raw=true "Title")
