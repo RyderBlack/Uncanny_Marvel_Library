@@ -74,7 +74,7 @@
     justify-content: flex-end;
   }
 
-  .linkss > a {
+  .link-href {
     margin: 0 10px 0 0;
     padding: 0 10px 5px 10px;
     color: black;
@@ -173,7 +173,6 @@
 
 .btn-closing {
   padding: 2em 0 0 4.5em;
-  
 }
 
 .btn-closing > p {
@@ -245,4 +244,11 @@
 
 .buttonDarkMode {
   margin-bottom: 10px;
+}
+
+.darkmode-href {
+    margin: 0 10px 0 0;
+    padding: 0 10px 5px 10px;
+    color: #f5f5f5;
+    font-size: 28px;
 }

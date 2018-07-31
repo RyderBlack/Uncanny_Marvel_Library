@@ -84,9 +84,9 @@ toggleDark() {
           <div className="row">
             <div className="col-md-12 linkss">
               <button onClick={this.toggleDark} className="btn btn-dark buttonDarkMode">Dark Mode</button>
-              <a href="https://ryhad.com"><FaUser className="melogo"/></a>
-              <a href="https://github.com/RyderBlack"><FaGithub className="tweetlogo"/></a>
-              <a href="https://twitter.com/RyhadB"><FaTwitter className="githublogo"/></a>
+              <a href="https://ryhad.com" className={this.state.showDarkMode ? "darkmode-href" : "link-href"}><FaUser className="melogo"/></a>
+              <a href="https://github.com/RyderBlack" className={this.state.showDarkMode ? "darkmode-href" : "link-href"}><FaGithub className="tweetlogo"/></a>
+              <a href="https://twitter.com/RyhadB" className={this.state.showDarkMode ? "darkmode-href" : "link-href"}><FaTwitter className="githublogo"/></a>
             </div>
           </div>
           
