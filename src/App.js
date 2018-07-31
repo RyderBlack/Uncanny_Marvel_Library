@@ -73,7 +73,7 @@ toggleDark() {
 
           <nav className="navbar navbar-expand-lg navbar-light">
             <a href="https://marvel.com" className="App-logo col-md-2"><img src={logo} className="App-logo" alt="logo" /></a>
-            <h1 className="col-md-8 App-title">Welcome To Marvel Comics !</h1>
+            <h1 className={this.state.showDarkMode ? "darkmode-title col-md-8" : "col-md-8 App-title"} >Welcome To Marvel Comics !</h1>
           </nav>
 
           <div className="row">
@@ -83,7 +83,7 @@ toggleDark() {
 
           <div className="row">
             <div className="col-md-12 linkss">
-              <button onClick={this.toggleDark} className="buttonDarkMode">Dark Mode</button>
+              <button onClick={this.toggleDark} className="btn btn-dark buttonDarkMode">Dark Mode</button>
               <a href="https://ryhad.com"><FaUser className="melogo"/></a>
               <a href="https://github.com/RyderBlack"><FaGithub className="tweetlogo"/></a>
               <a href="https://twitter.com/RyhadB"><FaTwitter className="githublogo"/></a>
