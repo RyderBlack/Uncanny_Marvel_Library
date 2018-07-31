@@ -105,7 +105,7 @@ toggleDark() {
         <div className="container-fluid">
         <GridComics com={this.state} action={this.handleOpenModal} handleClose={this.handleCloseModal}/>
         </div>
-        
+        <footer>"Data provided by Marvel. © 2014-2018 Marvel"</footer>
       </div>
     );
   }
