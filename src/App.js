@@ -15,12 +15,14 @@ class App extends Component {
       query: 'Thor',
       comics: [],
       showModal: false,
-      eventVal: 0
+      eventVal: 0,
+      showDarkMode: false
     }
-   this.searchComics()
-   this.handleInputChange = this.handleInputChange.bind(this)
-  this.handleOpenModal = this.handleOpenModal.bind(this);
-  this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.searchComics()
+    this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.toggleDark = this.toggleDark.bind(this);
   }
 
   searchComics() {
@@ -37,7 +39,7 @@ class App extends Component {
     this.setState({
       query: this.search.value
     }, () => {
-      if (this.state.query && this.state.query.length >= 1) {
+      if (this.state.query && this.state.query.length >= 3) {
           this.searchComics()
       } 
     })
@@ -59,12 +61,14 @@ class App extends Component {
     this.setState({ showModal: false });
   }
 
-
+toggleDark() {
+  this.setState({ showDarkMode: !this.state.showDarkMode });
+}
   
 
   render() {
     return (
-      <div className="App">
+      <div className={this.state.showDarkMode ? "darkmode" : "App"}>
         <header className="App-header container-fluid">
 
           <nav className="navbar navbar-expand-lg navbar-light">
@@ -79,6 +83,7 @@ class App extends Component {
 
           <div className="row">
             <div className="col-md-12 linkss">
+              <button onClick={this.toggleDark} className="buttonDarkMode">Dark Mode</button>
               <a href="https://ryhad.com"><FaUser className="melogo"/></a>
               <a href="https://github.com/RyderBlack"><FaGithub className="tweetlogo"/></a>
               <a href="https://twitter.com/RyhadB"><FaTwitter className="githublogo"/></a>

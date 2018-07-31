@@ -5,6 +5,7 @@
 
 .App {
   text-align: center;
+  background-color: #f5f5f5
 }
 
 .App-logo {
@@ -65,9 +66,8 @@
   -moz-box-shadow: 0px 6px 35px -1px rgba(0,0,0,0.75);
   box-shadow: 0px 6px 35px -1px rgba(0,0,0,0.75);
   }
-  body {
-    background-color: #f5f5f5
-  }
+
+  
 
   .linkss {
     display: flex;
@@ -229,4 +229,9 @@
   -webkit-animation-duration: 0.5s;
   -moz-animation-duration: 0.5s;
   animation-duration: 0.5s;
+}
+
+.darkmode {
+  background-color: #222;
+  text-align: center
 }
