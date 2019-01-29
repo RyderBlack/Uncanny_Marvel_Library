@@ -3,6 +3,7 @@ import logo from './Marvel-comics-logo-vector.png';
 import {FaGithub, FaUser, FaTwitter} from 'react-icons/lib/fa';
 import GridComics from './components/GridComics';
 //import ComicDetails from './components/ComicDetails';
+import LazyLoad from 'react-lazyload';
 import './App.css';
 import axios from 'axios';
 
@@ -27,10 +28,11 @@ class App extends Component {
 
   searchComics() {
 
-    axios.get(`https://gateway.marvel.com:443/v1/public/comics?titleStartsWith=${this.state.query}&limit=28&apikey=7db6ef89ac98e1a615b902a069b08e27`)
+    axios.get(`https://gateway.marvel.com:443/v1/public/comics?titleStartsWith=${this.state.query}&limit=44&apikey=7db6ef89ac98e1a615b902a069b08e27`)
       .then(res => {
         let comicsRes = res.data.data.results;
         this.setState({comics : comicsRes})
+        console.log(this.state.comics)
       })
       
   }
@@ -77,7 +79,7 @@ toggleDark() {
           </nav>
 
           <div className="row">
-          <input type="text" placeholder="Enter a comic name" onChange={this.handleInputChange} className="search-input" ref={input => this.search = input}
+          <input type="text" placeholder="Enter a comic or a superhero name" onChange={this.handleInputChange} className="search-input" ref={input => this.search = input}
            /> 
           </div>
 
@@ -102,8 +104,10 @@ toggleDark() {
           )})}
         </ul>
         */}
-        <div className="container-fluid">
-        <GridComics com={this.state} action={this.handleOpenModal} handleClose={this.handleCloseModal}/>
+        <div className="container-fluid gridy">
+          <LazyLoad height={200}>
+            <GridComics com={this.state} action={this.handleOpenModal} handleClose={this.handleCloseModal} darkmode={this.state.showDarkMode}/>
+          </LazyLoad>
         </div>
         <footer className={this.state.showDarkMode ? "darkmode-footer" : "App"}>"Data provided by Marvel. © 2014-2018 Marvel"</footer>
       </div>

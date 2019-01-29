@@ -24,11 +24,11 @@ export default class ComicDetails extends Component {
 
         <div key={this.props.details.comics[i].id} className="row wrappy">
 
-                <div className="detail-img col-md-4">
-                    <img className="img-posters fade-in" id={this.props.details.comics[i].id} src={this.props.details.comics[i].thumbnail.path+".jpg"} alt=""/>
+                <div className="detail-img col-md-3">
+                    <img className="img-poster-detail fade-in" id={this.props.details.comics[i].id} src={this.props.details.comics[i].thumbnail.path+".jpg"} alt=""/>
                 </div>
 
-                <div className="detail-text col-md-6">
+                <div className="detail-text col-md-8">
                     <h2 className="detail-title">{this.props.details.comics[i].title}</h2>
                     <p >{this.props.details.comics[i].description}</p>
 
@@ -43,17 +43,30 @@ export default class ComicDetails extends Component {
 
                 
                     <p style={{'font-size':22,'font-weight': 'bold'}}>See also:</p>
-                    <div className="zoomIn">
-                        <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized].id} src={this.props.details.comics[randomized].thumbnail.path+".jpg"} alt=""/>
+                    <div className="row zoomIn">
+                        <div className="col-md-2">
+                            <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized].id} src={this.props.details.comics[randomized].thumbnail.path+".jpg"} alt=""/>
+                        </div>
+                        <div className="col-md-2">
                         <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+1].id} src={this.props.details.comics[randomized+1].thumbnail.path+".jpg"} alt=""/>
+                        </div>
+
+                        <div className="col-md-2">
                         <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+2].id} src={this.props.details.comics[randomized+2].thumbnail.path+".jpg"} alt=""/>
+                        </div>
+
+                        <div className="col-md-2">
                         <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+3].id} src={this.props.details.comics[randomized+3].thumbnail.path+".jpg"} alt=""/>
+                        </div>
+
+                        <div className="col-md-2">
                         <img onClick={this.props.action2} className="img-also" id={this.props.details.comics[randomized+4].id} src={this.props.details.comics[randomized+4].thumbnail.path+".jpg"} alt=""/>
+                        </div>
                     </div>
                 {/*<SeeAlso action2={this.props.action2} id={this.props.details.comic[i]} />*/}
                 </div>
 
-                <div className="col-xs-1 col-md-1 btn-closing">
+                <div className="col-md-1 btn-closing">
                     <p onClick={this.props.handleclo}>X</p>
                 </div>
         </div>           
